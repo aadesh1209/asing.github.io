@@ -1,0 +1,272 @@
+html {
+    font-size: 20px;
+    font-family: Play;
+}
+body {
+    background-color: #F9F4ED;
+}
+h3, h2 {
+    margin: 0;
+}
+h2 {
+    font-size: 1.4rem;
+}
+.bold {
+    font-weight: bold;
+}
+
+.flex-container {
+    display: flex;    
+}
+
+nav {
+    display: flex;
+    height: 7vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: hsla(183, 28%, 57%, 0.9);
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.home span a{
+    padding: 4px;
+    margin-left: 5vh;
+    border: 1.5px solid black;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    width: 40%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 0 auto;
+    list-style: none;
+    text-decoration: none;
+}
+
+.nav-links li a, .home span a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+    transition-property: padding;
+    transition-property: border;
+    transition-property: background-color;
+    transition-duration: 0s;
+    transition-timing-function: ease-in-out;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+
+.nav-links li a:hover, .home span a:hover {
+    padding: 3.5px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    background-color: ivory;
+}
+
+.profile {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8vh;
+    height: auto;
+    flex-wrap: wrap;
+}
+
+#profile-pic {
+    height: 85vh;
+    width: auto;
+    border-radius: 100%;
+    padding: 0.6rem;
+    margin: 0 auto;
+    border: 6px inset darkgray;
+}
+
+h1 {
+    font-family: "Major Mono Display";
+    font-size: 18vh;
+    margin: 0 auto;
+    text-align: right;
+    flex-shrink: 2;
+}
+
+.education {
+    background-color: #e8e8e8;
+}
+
+.education h2 {
+    text-align: center;
+    font-size: 1.4rem;
+    display: block;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    border: 2px solid gray;
+}
+.edu-container {
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    background-image: url("../images/ucla.jpg");
+    background-size: cover;
+}
+
+.parallax {
+    background-attachment: fixed;    
+}
+
+.edu-container img {
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    border-radius: 28px;
+}
+
+.edu-details {
+    background-color: ivory;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 36%;
+    align-self: flex-start;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    border-radius: 0px;
+    padding: 15px;
+}
+.edu-details h6 {
+    font-size: 0.6rem;
+    margin: 3px;
+}
+
+.edu-details h5 {
+    font-size: 1rem;
+    margin: 3px;
+}
+
+.edu-details p {
+    font-size: 1.25vw;
+    text-align: justify;
+}
+
+
+.spacer {
+    height: 7vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99%;
+}
+
+.projects {
+    display: flex;
+    background-image: url("../images/projects-bck.jpeg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    flex-direction: column
+}
+
+.project-pics {
+    display: flex;
+    height: 96vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.credits a {
+    color: white;
+    text-decoration: underline;
+}
+.credits {
+    display: block;
+    color: white;
+    height: 0px;
+    font-size: 0.4rem;
+    background-color: lightcoral;
+    margin-left: auto;
+    margin-right: 3px;
+}
+
+#senior-design-pic {
+    height: 25vh;
+    border-radius: 10px;
+}
+
+#nasa-project {
+    height: 50vh;    
+}
+
+.italy {
+    height: 90vh;
+    background-image: url("../images/italy-background.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.italy-text {
+    background-color: ivory;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 30%;
+    position: relative;
+    top: 25%;
+    left: 8%;
+    padding: 15px;
+    margin: 0;
+}
+
+.italy-text p {
+    font-size: 0.8rem;
+    text-align: justify;
+    margin: 0;
+}
+.italy-text h2 {
+    padding: 5px;
+    border: 2px solid gray;
+    text-align: center;
+}
+
+.italy .credits {
+    position: relative;
+    top: 86.5vh;
+}
+    
+
+@media screen and (max-width: 768px), (max-height: 550px) {
+    .edu-details, .italy-text {
+        position: static;
+        margin: 0 auto;
+        align-self: center;
+        height: auto;
+        max-height: 300px;
+        min-width: 250px;
+        overflow: scroll;
+    }
+    .italy-text p {
+        font-size: 13px;
+    }
+    .edu-details p {
+        display: none;
+    }
+    .nav-links {
+        width: 65%;
+    }
+}
